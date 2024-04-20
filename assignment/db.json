@@ -1,0 +1,31 @@
+{
+  "employee": [
+    {
+      "id": "1",
+      "name": "john",
+      "email": "john@gmail.com",
+      "phone": "23978372"
+    },
+    {
+      "id": "da2f",
+      "name": "Vaishnavi Sanjay Thorat ",
+      "email": "vaishnavit@gmail.com",
+      "phone": "097896490090",
+      "isActive": true
+    },
+    {
+      "id": "fe81",
+      "name": "vais",
+      "email": "kjsdhasiud@gmail.com",
+      "phone": "90218301298e",
+      "isActive": true
+    },
+    {
+      "id": "c926",
+      "name": "Manali Lamture",
+      "email": "manali@gmail.com",
+      "phone": "9217309218",
+      "isActive": true
+    }
+  ]
+}
