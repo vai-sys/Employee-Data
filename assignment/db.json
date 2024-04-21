@@ -9,7 +9,7 @@
     {
       "id": "91c5",
       "name": "Vaishnavi Sanjay Thorat Thorat",
-      "email": "vaishnavit582@gmail.com",
+      "email": "vaishnavit@gmail.com",
       "phone": "09767873377",
       "isActive": true
     },
@@ -27,13 +27,7 @@
       "phone": "79328470312",
       "isActive": true
     },
-    {
-      "id": "0bd9",
-      "name": "Bank Of Maharashtra",
-      "email": "vaishnavit582@gmail.com",
-      "phone": "09767873377",
-      "isActive": true
-    },
+   
     {
       "id": "9c48",
       "name": "sakshi Bhagat",
@@ -51,8 +45,22 @@
     {
       "id": "6cfe",
       "name": "Bank Of Maharashtra",
-      "email": "vaishnavit582@gmail.com",
-      "phone": "09767873377",
+      "email": "vaishnavit@gmail.com",
+      "phone": "09767",
+      "isActive": true
+    },
+    {
+      "id": "6166",
+      "name": "Vaishnavi Sanjay Thorat Thorat",
+      "email": "vaishnavit@gmail.com",
+      "phone": "0976738479",
+      "isActive": true
+    },
+    {
+      "id": "44cb",
+      "name": "nisha",
+      "email": "nisha@gmail.com",
+      "phone": "y2983602",
       "isActive": true
     }
   ]

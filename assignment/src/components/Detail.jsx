@@ -1,54 +1,47 @@
-
-
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 
 const Detail = () => {
-  const { empid } = useParams(); // Extract employee ID from URL parameters
-
-  const [empData, setEmpData] = useState({}); // Initialize empty state for employee data
-  const [isLoading, setIsLoading] = useState(true); // Track loading state
-  const [error, setError] = useState(null); // Store any errors encountered
+  const { empid } = useParams()
+  const [empData, setEmpData] = useState({})
+  const [error, setError] = useState(null)
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`http://localhost:8000/employee/${empid}`); // Use template literal for URL construction
-        if (!response.ok) {
-          throw new Error(`Error fetching employee data: ${response.statusText}`);
+    fetch('/db.json')
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
         }
-        const data = await response.json();
-        console.log(data);
-        setEmpData(data);
-      } catch (err) {
-        console.error('Error fetching employee data:', err);
-        setError(err.message); // Set error state for display
-      } finally {
-        setIsLoading(false); // Always set loading state to false after fetching
-      }
-    };
+        return res.json()
+      })
+      .then((resp) => {
+        const employee = resp.employee.find(emp => emp.id === empid);
+        if (!employee) {
+          throw new Error('Employee not found');
+        }
+        setEmpData(employee);
+      })
+      .catch((err) => {
+        setError(err.message)
+        console.log(err.message)
+      })
+  }, [empid])
 
-    fetchData();
-  }, [empid]); // Re-run effect when empid changes
-
-  if (isLoading) {
-    return <div>Loading employee data...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
-
-  // Display employee data using empData
   return (
     <div>
-      <h1>Employee Name: {empData.name}</h1>
-      {/* Add other employee data properties as needed */}
+      {error && <p>{error}</p>}
+      {empData.name && (
+        <div>
+          <p>Employee Name is {empData.name}</p>
+          <p>Employee Email is {empData.email}</p>
+          <p>Employee Email is {empData.email}</p> 
+        </div>
+      )}
     </div>
-  );
-};
+  )
+}
 
-export default Detail;
+export default Detail
 
 
 // import React from 'react'
@@ -67,7 +60,8 @@ export default Detail;
 // const Detail = () => {
 //   return (
 //     <div>
-//       <h1>Employee Name is {employee.name}</h1>
+//       <p>Employee Name is {employee.name}</p>
+//       <p>EMployee Email {employee.email}</p>
 //     </div>
 //   )
 // }

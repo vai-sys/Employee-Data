@@ -75,7 +75,7 @@ const Addnew = () => {
           <label htmlFor="phone" className="block mb-1 text-sm font-medium text-gray-700">Phone</label>
           <input
             type="text"
-            id="phone"
+            id="phone" 
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
