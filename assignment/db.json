@@ -19,6 +19,41 @@
       "email": "manali@gmail.com",
       "phone": "09217309218",
       "isActive": true
+    },
+    {
+      "id": "7b0c",
+      "name": "sakshi Bhagat",
+      "email": "sakshi@gmail.com",
+      "phone": "79328470312",
+      "isActive": true
+    },
+    {
+      "id": "0bd9",
+      "name": "Bank Of Maharashtra",
+      "email": "vaishnavit582@gmail.com",
+      "phone": "09767873377",
+      "isActive": true
+    },
+    {
+      "id": "9c48",
+      "name": "sakshi Bhagat",
+      "email": "sakshi@gmail.com",
+      "phone": "79328470312",
+      "isActive": true
+    },
+    {
+      "id": "d71b",
+      "name": "Yashini",
+      "email": "yashini@gmail.com",
+      "phone": "09217309218",
+      "isActive": true
+    },
+    {
+      "id": "6cfe",
+      "name": "Bank Of Maharashtra",
+      "email": "vaishnavit582@gmail.com",
+      "phone": "09767873377",
+      "isActive": true
     }
   ]
 }
